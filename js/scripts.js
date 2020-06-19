@@ -5,9 +5,8 @@ function Order() {
   this.pizzaOrder = [];
 }
 
-function CustomerInfo(firstName, lastName, phoneNumber, address) {
-  this.firstName = firstName;
-  this.lastName = lastName;
+function CustomerInfo(name, phoneNumber, address) {
+  this.name = name;
   this.phoneNumber = phoneNumber;
   this.address = address;
 }
@@ -32,39 +31,43 @@ Pizza.prototype.totalCost = function() {
   } else {
     alert("Must choose size");
   } if (this.meats === 7) {
-    this.pizzaCost += 6;
+    this.pizzaCost += 6.00;
   } else if (this.meats === 6) {
-    this.pizzaCost += 5;
+    this.pizzaCost += 5.00;
   } else if (this.meats === 5) {
-    this.pizzaCost += 4;
+    this.pizzaCost += 4.00;
   } else if (this.meats === 4) {
-    this.pizzaCost += 3;
+    this.pizzaCost += 3.00;
   } else if (this.meats === 3) {
-    this.pizzaCost += 2;
+    this.pizzaCost += 2.00;
   } else if (this.meats === 2) {
-    this.pizzaCost += 1;
-  } else (this.meats === 1) {
-    this.pizzaCost += 0;
+    this.pizzaCost += 1.00;
+  } else if (this.meats === 1) {
+    this.pizzaCost += 0.00;
+  } else {
+    confirm("Continue with no meat?");
   } if (this.veggies === 10) {
-    this.pizzaCost += 4.5;
+    this.pizzaCost += 4.50;
   } else if (this.veggies === 9) {
-    this.pizzaCost += 4;
+    this.pizzaCost += 4.00;
   } else if (this.veggies === 8) {
-    this.pizzaCost += 3.5;
+    this.pizzaCost += 3.50;
   } else if (this.veggies === 7) {
-    this.pizzaCost += 3;
+    this.pizzaCost += 3.00;
   } else if (this.veggies === 6) {
-    this.pizzaCost += 2.5;
+    this.pizzaCost += 2.50;
   } else if (this.veggies === 5) {
-    this.pizzaCost += 2;
+    this.pizzaCost += 2.00;
   } else if (this.veggies === 4) {
-    this.pizzaCost += 1.5;
+    this.pizzaCost += 1.50;
   } else if (this.veggies === 3) {
-    this.pizzaCost += 1;
+    this.pizzaCost += 1.00;
   } else if (this.veggies === 2) {
-    this.pizzaCost += .5;
-  } else (this.veggies === 1) {
-    this.pizzaCost += 0;
+    this.pizzaCost += 0.50;
+  } else if (this.veggies === 1) {
+    this.pizzaCost += 0.00;
+  } else {
+    confirm("Continue with no veggies?");
   }
   return this.pizzaCost;
 }
@@ -77,3 +80,13 @@ Order.prototype.addPizza = function(pizza) {
   this.pizzaOrder.push(pizza);
 }
 //UI Logic
+$(document).ready(function() {
+  $("form#pizza-order").submit(function(event) {
+    event.preventDefault();
+    let customerInfo = $(".name").val();
+    let pizzaSize = $(".size").val();
+    let meatToppings = 0;
+
+    let veggieToppings = 0;
+  });
+});
