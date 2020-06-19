@@ -79,6 +79,31 @@ Order.prototype.addCustomer = function(customerInfo) {
 Order.prototype.addPizza = function(pizza) {
   this.pizzaOrder.push(pizza);
 }
+
+Pizza.prototype.addsize = function() {
+  let orderSize = $("select.size").val();
+  this.size.push(orderSize);
+}
+
+Pizza.prototype.addSauce = function() {
+  let orderSauce = $("select.sauce").val();
+  this.sauce.push(orderSauce);
+}
+
+Pizza.prototype.addMeats = function() {
+  let orderMeats = [];
+  if (document.meat.meats.checked==true) {
+    this.meats.push(orderMeats)
+  }
+}
+
+Pizza.prototype.addVeggies = function() {
+  let orderVeggies = [];
+  if (document.meat.veggies.checked==true) {
+    this.veggies.push(orderveggies)
+  }
+}
+
 //UI Logic
 function addPizzaToOrder(displayOrder) {
   let pizzaList = $("ol#order");
@@ -116,6 +141,7 @@ $(document).ready(function() {
     let addToOrder = new Order(customerInvoice, newPizza);
     Order.addCustomer(customerInvoice);
     Order.addPizza(newPizza);
+    $("#add-to-order").show();
     $(".name").html(customerInfo.name);
     $(".number").html(customerInfo.number);
     $(".address").html(customerInfo.address);
