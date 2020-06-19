@@ -19,7 +19,7 @@
       <form id="new-customer">
         <h3>New order form</h3>
         <div class="form-group">
-          <label for="name">First Name:</label>
+          <label for="name">Name for Order:</label>
           <input id="name" type="text" class="form-control">
         </div>
         <div class="form-group">
@@ -46,11 +46,11 @@
       <div class="container">
         <label for="sauce-choice">Sauce style</label>
         <select class="sauce-choice">
-          <option value="bbq">BBQ</option>
           <option value="marinara">Marinara</option>
+          <option value="bbq">BBQ</option>
           <option value="ranch">Ranch</option>
           <option value="buffalo">Buffalo</option>
-          <option value="Alfredo">Alfredo</option>
+          <option value="alfredo">Alfredo</option>
         </select>
       </div>
       <div class="row">
@@ -123,7 +123,9 @@
     <div class="container">
       <div id="add-to-order">
         <h4>Customer receipt:</h4>
-        <p><span class="customer-info"></span></p>
+        <p>Name: <span class="name"></span></p>
+        <p>Number: <span class="number"></span></p>
+        <p>Address: <span class="address"></span></p>
         <h4>Order:</h4>
         <ol id="order">
         </ol>

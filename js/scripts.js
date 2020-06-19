@@ -80,31 +80,45 @@ Order.prototype.addPizza = function(pizza) {
   this.pizzaOrder.push(pizza);
 }
 //UI Logic
+function addPizzaToOrder(displayOrder) {
+  let pizzaList = $("ol#order");
+  let htmlForPizza = "";
+  displayOrder.order.forEach(function(pizzaOrder) {
+    htmlForPizza += "<li>" + pizza.size + " " + pizza.sauce + " " + pizza.meats + " " + pizza.veggies + "</li>";
+  })
+  pizzaList.html(htmlForPizza);
+}
+
 $(document).ready(function() {
   $("form#pizza-order").submit(function(event) {
     event.preventDefault();
-    let customerName = $("#name").val();
-    let customerPhone = $("#phone-number").val();
-    let customerAddress = $("#address").val();
+    addPizzaToOrder();
+    let customerName = $("input#name").val();
+    let customerPhone = $("input#phone-number").val();
+    let customerAddress = $("input#address").val();
     let pizzaSize = $(".size").val();
     let pizzaSauce = $(".sauce-choice").val();
     let meatToppings = 0;
     for (i=0; i.document.meat.meats.length; i++) {
-      if (document.meat.meats[i].checked===true) {
+      if (document.meat.meats[i].checked==true) {
         meatToppings +=1;
       }
     }
     let veggieToppings = 0;
     for (i=0; i.document.veggie.veggies.length; i++) {
-      if (document.veggie.veggies[i].checked===true) {
+      if (document.veggie.veggies[i].checked==true) {
         veggieToppings +=1;
       }
     }
+
     let newPizza = new Pizza(pizzaSize, pizzaSauce, meatToppings, veggieToppings);
     let customerInvoice = new CustomerInfo(customerName, customerPhone, customerAddress);
     let addToOrder = new Order(customerInvoice, newPizza);
-    $(".customer-info").text(" " + customerInvoice);
+    Order.addCustomer(customerInvoice);
+    Order.addPizza(newPizza);
+    $(".name").html(customerInfo.name);
+    $(".number").html(customerInfo.number);
+    $(".address").html(customerInfo.address);
     $("ol#order").append.html("<li>newPizza</li>");
-    $("#add-to-order").show();
   });
 });
