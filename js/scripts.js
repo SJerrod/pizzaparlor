@@ -83,10 +83,28 @@ Order.prototype.addPizza = function(pizza) {
 $(document).ready(function() {
   $("form#pizza-order").submit(function(event) {
     event.preventDefault();
-    let customerInfo = $(".name").val();
+    let customerName = $("#name").val();
+    let customerPhone = $("#phone-number").val();
+    let customerAddress = $("#address").val();
     let pizzaSize = $(".size").val();
+    let pizzaSauce = $(".sauce-choice").val();
     let meatToppings = 0;
-
+    for (i=0; i.document.meat.meats.length; i++) {
+      if (document.meat.meats[i].checked===true) {
+        meatToppings +=1;
+      }
+    }
     let veggieToppings = 0;
+    for (i=0; i.document.veggie.veggies.length; i++) {
+      if (document.veggie.veggies[i].checked===true) {
+        veggieToppings +=1;
+      }
+    }
+    let newPizza = new Pizza(pizzaSize, pizzaSauce, meatToppings, veggieToppings);
+    let customerInvoice = new CustomerInfo(customerName, customerPhone, customerAddress);
+    let addToOrder = new Order(customerInvoice, newPizza);
+    $(".customer-info").text(" " + customerInvoice);
+    $("ol#order").append.html("<li>newPizza</li>");
+    $("#add-to-order").show();
   });
 });

@@ -57,71 +57,73 @@
         <div class="col-md-6">
           <h3>Meat choice/choices</h3>
           <h4>First is included, <em>$1.00 for each additional meat.</em></h4>
-          <div class="checkbox">
-            <label><input type="checkbox" name="meats" value="meats">Bacon</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" name="meats" value="meats">Anchovies</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" name="meats" value="meats">Canadian Bacon</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" name="meats" value="meats">Grilled Chicken</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" name="meats" value="meats">Sausage</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" name="meats" value="meats">Pepperoni</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" name="meats" value="meats">Philly Steak</label>
-          </div>
+          <form class="meat">
+            <div class="checkbox">
+              <label><input type="checkbox" name="meats" value="meats">Bacon</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="meats" value="meats">Anchovies</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="meats" value="meats">Canadian Bacon</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="meats" value="meats">Grilled Chicken</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="meats" value="meats">Sausage</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="meats" value="meats">Pepperoni</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="meats" value="meats">Philly Steak</label>
+            </div>
+          </form>
         </div>
         <div class="col-md-6">
           <h3>Veggie choice/choices</h3>
           <h4>First is included, <em>$0.50 for each additional veggie.</em></h4>
-          <div class="checkbox">
-            <label><input type="checkbox" name="veggies" value="veggies">Roma Tomato</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" name="veggies" value="veggies">Black Olives</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" name="veggies" value="veggies">Jalapeno</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" name="veggies" value="veggies">Roasted Garlic</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" name="veggies" value="veggies">Mushrooms</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" name="veggies" value="veggies">Onion</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" name="veggies" value="veggies">Artichoke hearts</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" name="veggies" value="veggies">Banana Peppers</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" name="veggies" value="veggies">Pineapple</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" name="veggies" value="veggies">Green Pepper</label>
-          </div>
+          <form class="veggie">
+            <div class="checkbox">
+              <label><input type="checkbox" name="veggies" value="veggies">Roma Tomato</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="veggies" value="veggies">Black Olives</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="veggies" value="veggies">Jalapeno</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="veggies" value="veggies">Roasted Garlic</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="veggies" value="veggies">Mushrooms</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="veggies" value="veggies">Onion</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="veggies" value="veggies">Artichoke hearts</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="veggies" value="veggies">Banana Peppers</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="veggies" value="veggies">Pineapple</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="veggies" value="veggies">Green Pepper</label>
+            </div>
+          </form>
         </div>
       </div>
       <button type="submit" class="btn-danger btn-lg">Add to Order</button>
     </form>
     <div class="container">
       <div id="add-to-order">
-        <p>Name: <span class="full-name"></span></p>
-        <p>Phone Number: <span class="number"></span></p>
-        <p>Address: <span class="delivery-address"></span></p>
-        <p>Total: <span class="total-cost"></span></p>
+        <h4>Customer receipt:</h4>
+        <p><span class="customer-info"></span></p>
         <h4>Order:</h4>
         <ol id="order">
         </ol>
