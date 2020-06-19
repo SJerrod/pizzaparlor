@@ -21,7 +21,7 @@
 |----------|-------|--------|
 | User inputs text and sees output | "text" | "text" |
 | User checks radio buttons to choose toppings| Button checked | Chooses topping |
-| User can choose pizza size | Small, Med, Large | Large |
+| User can choose pizza size | Small, Medium, Large, X-Large | Large |
 | User can choose sauce style | BBQ, Marinara, Ranch, Buffalo, Alfredo | Marinara |
 | User can choose meats | Bacon, Anchovies, Canadian Bacon, Grilled Chicken, Sausage, Pepperoni, Philly Steak | Canadian Bacon |
 | User can choose veggies | Roma Tomato, Black Olives, Jalapeno, Roasted Garlic, Mushrooms, Onion, Artichoke Hearts, Banana Pepper, Pineapple, Green Pepper | Pineapple |
