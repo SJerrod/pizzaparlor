@@ -8,8 +8,8 @@
 
 ## Setup
 
-* [Open page in browser]()
-* [Github repo]()
+* [Open page in browser](https://sjerrod.github.io/pizzaparlor/)
+* [Github repo](https://github.com/SJerrod/pizzaparlor.git)
 * To open via Download click clone or download
 * Double click index.html to open in web browser
 * Or clone the directory onto your computer
