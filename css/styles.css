@@ -1,3 +1,41 @@
 #add-to-order {
   display: none;
 }
+
+body {
+  background-color: rgb(255, 255, 188);
+  border: dotted yellow;
+}
+
+h2, h3 {
+  text-decoration: underline;
+}
+
+.jumbotron {
+  text-align: center;
+  height: 200px;
+  width: auto;
+  background-color: crimson;
+  padding-top: 10px;
+  margin-top: 10px;
+  border: dotted yellow;
+  color: yellow;
+  font-family: monospace;
+}
+
+#new-customer {
+  height: 300px;
+  width: 400px;
+  border: solid green;
+  background-color: green;
+  color: yellow;
+  border: dotted yellow;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.row img {
+  height: 250px;
+  border-radius: 10%;
+  border: dotted crimson;
+}
